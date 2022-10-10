@@ -4,6 +4,6 @@
   "setting": {
     "compileHotReLoad": true,
     "autoAudits": true,
-    "urlCheck": false
+    "urlCheck": true
   }
 }

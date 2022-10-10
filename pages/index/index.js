@@ -19,7 +19,7 @@ Page({
   },
   onLoad() {
     if (wx.getUserProfile) {
-      this.setData({
+      this.setData({ 
         canIUseGetUserProfile: true
       })
     }

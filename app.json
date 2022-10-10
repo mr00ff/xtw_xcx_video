@@ -1,14 +1,40 @@
 {
   "pages": [
+    "pages/main/main",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/main/main"
+    "pages/toolset/toolset",
+    "pages/member/member"
   ],
+ 
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "信天翁去水印",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2"
+  "style": "v2",
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+      "pagePath": "pages/main/main",
+      "text": "解析下载",
+      "iconPath": "images/video_un.png",
+      "selectedIconPath": "images/video_select.png"
+    },
+    {
+      "pagePath": "pages/toolset/toolset",
+      "text": "更多工具",
+      "iconPath": "images/toolset_un.png",
+      "selectedIconPath": "images/toolset_select.png"
+    },
+    {
+      "pagePath": "pages/member/member",
+      "text": "用户中心",
+      "iconPath": "images/member_un.png",
+      "selectedIconPath": "images/member_select.png"
+    }
+  ]
+  }
 }

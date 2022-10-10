@@ -1,2 +1,30 @@
 <!--pages/main/main.wxml-->
-<text>pages/main/main.wxml</text>
+
+<view class="main-video">
+  <video src="{{video_link}}" style="width: 100%;"></video>
+</view>
+<view style="flex-direction: row;height: 100rpx;align-items: center;">
+  <view style="width: 70%;display: inline-block; margin: 10rpx;">
+    <input type="text" style="border: #bfbfbf solid 1px;width: 100%;height: 87rpx;" placeholder="请贴贴分享链接" value="{{linkValue}}" bindinput="linkInput" />
+  </view>
+  <view style="width: 26%;display: inline-block;">
+    <button type="primary" style="width: 100%;height: 90rpx;box-sizing: border-box;background: #1296db;" bindtap="pasteHandle">贴贴</button>
+  </view>
+</view>
+
+<view wx:if="{{linkStatus}}">
+  <!-- <view wx:if="true"> -->
+  <view style="flex-direction: row;height: 100rpx;align-items: center;">
+    <view style="width: 70%;display: inline-block; margin: 10rpx;">
+      <input type="text" disabled="true" style="border: #bfbfbf solid 1px;width: 100%;height: 87rpx;" value="{{video_link}}"/>
+    </view>
+    <view style="width: 26%;display: inline-block;">
+      <button type="primary" style="width: 100%;height: 90rpx;box-sizing: border-box;background: #1296db;">复制</button>
+    </view>
+  </view>
+
+  <view class="video-button-body">
+    <button type="default" size="mini" plain='true' bindtap="decodeLinkValue">解析资源</button>
+    <button type="default" size="mini" plain='true'>保存视频</button>
+  </view>
+</view>
